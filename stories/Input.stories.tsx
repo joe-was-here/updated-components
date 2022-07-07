@@ -2,6 +2,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import Input, { InputProps } from '../src/Input';
 import { Form, Formik } from 'formik';
+import styled from 'styled-components';
 
 const meta: Meta = {
   title: 'Input',
@@ -22,6 +23,10 @@ const meta: Meta = {
   },
 };
 
+const StyledButton = styled.button`
+  margin: 15px 0;
+`;
+
 export default meta;
 
 const Template: Story<InputProps> = (args, { globals: { theme } }) => {
@@ -36,9 +41,9 @@ const Template: Story<InputProps> = (args, { globals: { theme } }) => {
     >
       <Form>
         <Input {...args} variant={theme === 'nayya' ? 'contained' : 'normal'} />
-        <button type="submit" className="light">
+        <StyledButton type="submit" className="light">
           Submit
-        </button>
+        </StyledButton>
       </Form>
     </Formik>
   );

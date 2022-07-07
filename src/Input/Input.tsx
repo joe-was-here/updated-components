@@ -25,8 +25,16 @@ const Input = ({
     <FormGroup
       className={`formGroup ${className || ''} ${variant || 'normal'}`}
     >
-      <label htmlFor={id}>{label}</label>
-      <input id={id} type="text" placeholder={placeholder} {...field} />
+      <input
+        id={id}
+        type="text"
+        placeholder={placeholder}
+        {...field}
+        className="inputField"
+      />
+      <label htmlFor={id} className="inputLabel">
+        {label}
+      </label>
       {meta.touched && meta.error && <div className="helper">{meta.error}</div>}
     </FormGroup>
   );
