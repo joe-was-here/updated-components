@@ -1,0 +1,2379 @@
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Regular.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Italic.ttf')
+    format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Medium.ttf')
+    format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-MediumItalic.ttf')
+    format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-SemiBold.ttf')
+    format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-SemiBoldItalic.ttf')
+    format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.ttf')
+      format('truetype'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.woff')
+      format('woff'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.woff2')
+      format('woff2'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.eot')
+      format('embedded-opentype'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.svg')
+      format('svg');
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Book.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Medium.otf')
+    format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Bold.otf')
+    format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Black.otf')
+    format('opentype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Regular.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Book.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Medium.otf')
+    format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Bold.otf')
+    format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Black.otf')
+    format('opentype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Inter/Inter-Medium.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Inter/Inter-Bold.ttf')
+    format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Gilroy/Gilroy-ExtraBold.otf')
+    format('opentype');
+}
+:root {
+  --black: #000;
+  --white: #fff;
+  --palette-nero-1000: #fafafa;
+  --palette-nero-900: #f5f5f5;
+  --palette-nero-800: #c7c7c7;
+  --palette-nero-700: #b6b6b6;
+  --palette-nero-600: #9d9d9d;
+  --palette-nero-500: #858585;
+  --palette-nero-400: #6f6f6f;
+  --palette-nero-300: #595959;
+  --palette-nero-200: #323232;
+  --palette-nero-100: #191919;
+  --palette-koamaru-1000: #e3e3fa;
+  --palette-koamaru-900: #cacaf5;
+  --palette-koamaru-800: #9a9af0;
+  --palette-koamaru-700: #6767e8;
+  --palette-koamaru-600: #3535e1;
+  --palette-koamaru-500: #1d1dbf;
+  --palette-koamaru-400: #15158c;
+  --palette-koamaru-300: #111170;
+  --palette-koamaru-200: #0d0d54;
+  --palette-koamaru-100: #080838;
+  --palette-violet-1000: #efe3fa;
+  --palette-violet-900: #e0caf5;
+  --palette-violet-800: #c59af0;
+  --palette-violet-700: #a867e8;
+  --palette-violet-600: #8b35e1;
+  --palette-violet-500: #6e1dbf;
+  --palette-violet-400: #51158c;
+  --palette-violet-300: #411170;
+  --palette-violet-200: #310d54;
+  --palette-violet-100: #200838;
+  --palette-cinnabar-1000: #faebeb;
+  --palette-cinnabar-900: #fadcdc;
+  --palette-cinnabar-800: #f09a9a;
+  --palette-cinnabar-700: #e86868;
+  --palette-cinnabar-600: #de3535;
+  --palette-cinnabar-500: #bf1d1d;
+  --palette-cinnabar-400: #9f1818;
+  --palette-cinnabar-300: #7f1313;
+  --palette-cinnabar-200: #600f0f;
+  --palette-cinnabar-100: #400a0a;
+  --palette-eucalyptus-1000: #ebfaf1;
+  --palette-eucalyptus-900: #d7f5e4;
+  --palette-eucalyptus-800: #79e2a6;
+  --palette-eucalyptus-700: #36d379;
+  --palette-eucalyptus-600: #219653;
+  --palette-eucalyptus-500: #1c8147;
+  --palette-eucalyptus-400: #186b3b;
+  --palette-eucalyptus-300: #13562f;
+  --palette-eucalyptus-200: #0e4024;
+  --palette-eucalyptus-100: #092b18;
+  --palette-hacienda-1000: #faf5de;
+  --palette-hacienda-900: #f5ecc2;
+  --palette-hacienda-800: #ebd986;
+  --palette-hacienda-700: #e1c649;
+  --palette-hacienda-600: #c4a720;
+  --palette-hacienda-500: #877316;
+  --palette-hacienda-400: #716012;
+  --palette-hacienda-300: #5a4d0f;
+  --palette-hacienda-200: #443a0b;
+  --palette-hacienda-100: #2d2607;
+  --palette-koala-1000: #f7f6f4;
+  --palette-koala-900: #f2f0ed;
+  --palette-koala-800: #e3dfda;
+  --palette-koala-700: #cdc7c2;
+  --palette-koala-600: #b2aba5;
+  --palette-koala-500: #938c85;
+  --palette-koala-400: #726c66;
+  --palette-koala-300: #544e4a;
+  --palette-koala-200: #393533;
+  --palette-koala-100: #262321;
+  --palette-navy-1000: #e8effa;
+  --palette-navy-900: #d8e5f9;
+  --palette-navy-800: #bad1f5;
+  --palette-navy-700: #9abaef;
+  --palette-navy-600: #7ca1e6;
+  --palette-navy-500: #5f86d8;
+  --palette-navy-400: #476bc3;
+  --palette-navy-300: #324fa5;
+  --palette-navy-200: #20337d;
+  --palette-navy-100: #121c4e;
+  --palette-puprple-1000: #ece8f8;
+  --palette-puprple-900: #e3ddf4;
+  --palette-puprple-800: #d3c5ec;
+  --palette-puprple-700: #b9ace2;
+  --palette-puprple-600: #a494d6;
+  --palette-puprple-500: #8f7dc5;
+  --palette-puprple-400: #7967ae;
+  --palette-puprple-300: #5f4b92;
+  --palette-puprple-200: #413069;
+  --palette-puprple-100: #2a1d47;
+  --palette-red-1000: #fad9d9;
+  --palette-red-900: #f9c4c3;
+  --palette-red-800: #f79a96;
+  --palette-red-700: #f3776f;
+  --palette-red-600: #ec5b4e;
+  --palette-red-500: #de4635;
+  --palette-red-400: #c53422;
+  --palette-red-300: #9c2514;
+  --palette-red-200: #71190c;
+  --palette-red-100: #4e1007;
+  --palette-green-1000: #dbf7dc;
+  --palette-green-900: #c2f2c3;
+  --palette-green-800: #99e596;
+  --palette-green-700: #7cd273;
+  --palette-green-600: #65ba58;
+  --palette-green-500: #529c42;
+  --palette-green-400: #407b30;
+  --palette-green-300: #2f5b22;
+  --palette-green-200: #214017;
+  --palette-green-100: #162a0f;
+  --palette-amber-1000: #f8eed9;
+  --palette-amber-900: #f5e3c0;
+  --palette-amber-800: #efcc8d;
+  --palette-amber-700: #e6b25d;
+  --palette-amber-600: #db9431;
+  --palette-amber-500: #cc730d;
+  --palette-amber-400: #b65700;
+  --palette-amber-300: #983f00;
+  --palette-amber-200: #772900;
+  --palette-amber-100: #601b00;
+  --palette-isabelline-9: #1d1d1b;
+  --palette-isabelline-8: #393936;
+  --palette-isabelline-7: #565651;
+  --palette-isabelline-6: #73736c;
+  --palette-isabelline-5: #8f8f88;
+  --palette-isabelline-4: #aaaaa5;
+  --palette-isabelline-3: #c5c5c1;
+  --palette-isabelline-2: #e0e0de;
+  --palette-isabelline-1: #f0f0ef;
+  --palette-isabelline-0-5: #f7f7f6;
+  --palette-cobalt-8: #001842;
+  --palette-cobalt-7: #002563;
+  --palette-cobalt-6: #003184;
+  --palette-cobalt-5: #003da5;
+  --palette-cobalt-4: #0030ea;
+  --palette-cobalt-3: #307dff;
+  --palette-cobalt-2: #75a8ff;
+  --palette-cobalt-1: #bad4ff;
+  --palette-cobalt-0-5: #deeaff;
+  --palette-watermelon-0-5: #ffebf0;
+  --palette-watermelon-6: #f5003b;
+  --palette-sazerac-6: #d57900;
+  --palette-sinbad-7: #357980;
+  --white: #fff;
+  --black: #000;
+  --font-circular: 'Circular20', sans-serif;
+  --font-work-sans: 'Work Sans', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-gilroy: 'Gilroy', sans-serif;
+}
+
+.adp {
+  --font-family: var(--font-circular);
+  --light-mode-bg-color: var(--white);
+  --button-light-bg-color: var(--palette-navy-400);
+  --button-light-font-color: var(--white);
+  --button-light-hover-bg-color: var(--palette-navy-600);
+  --button-light-active-bg-color: var(--palette-navy-500);
+  --button-light-disabled-bg-color: var(--palette-koala-700);
+  --button-light-disabled-font-color: var(--white);
+  --button-light-outline-font-color: var(--palette-navy-300);
+  --button-light-outline-hover-font-color: var(--palette-navy-500);
+  --button-light-outline-active-font-color: var(--palette-navy-400);
+  --button-light-outline-disabled-font-color: var(--palette-koala-700);
+  --button-light-text-font-color: var(--palette-navy-300);
+  --button-light-text-hover-font-color: var(--palette-navy-500);
+  --button-light-text-hover-bg-color: var(--palette-navy-1000);
+  --button-light-text-active-bg-color: var(--palette-navy-900);
+  --button-light-text-active-font-color: var(--palette-navy-400);
+  --button-light-text-disabled-font-color: var(--palette-koala-700);
+  --dark-mode-bg-color: var(--palette-navy-200);
+  --button-dark-bg-color: var(--palette-navy-600);
+  --button-dark-font-color: var(--white);
+  --button-dark-hover-bg-color: var(--palette-navy-800);
+  --button-dark-active-bg-color: var(--palette-navy-700);
+  --button-dark-disabled-bg-color: var(--palette-koala-300);
+  --button-dark-disabled-font-color: var(--palette-koala-600);
+  --button-dark-outline-font-color: var(--palette-navy-800);
+  --button-dark-outline-hover-font-color: var(--palette-navy-1000);
+  --button-dark-outline-active-font-color: var(--palette-navy-800);
+  --button-dark-outline-disabled-font-color: var(--palette-koala-300);
+  --button-dark-text-font-color: var(--palette-navy-800);
+  --button-dark-text-hover-font-color: var(--palette-navy-1000);
+  --button-dark-text-hover-bg-color: var(--palette-navy-300);
+  --button-dark-text-active-font-color: var(--palette-navy-900);
+  --button-dark-text-active-bg-color: var(--palette-navy-300);
+  --button-dark-text-disabled-color: var(--palette-koala-300);
+  --pill-button-font-family: var(--font-circular);
+  --button-recommended-bg-color: var(--palette-green-400);
+  --button-optional-bg-color: var(--palette-koala-100);
+  --button-modified-bg-color: var(--palette-koala-300);
+  --button-waived-bg-color: var(--palette-koala-700);
+  --tooltip-light-default-color: var(--palette-koala-400);
+  --tooltip-light-hover-color: var(--palette-koala-600);
+  --tooltip-light-active-color: var(--palette-koala-300);
+  --tooltip-light-loading-color: var(--palette-koala-300);
+  --tooltip-dark-default-color: var(--palette-koala-600);
+  --tooltip-dark-hover-color: var(--palette-koala-400);
+  --tooltip-dark-active-color: var(--palette-koala-500);
+  --tooltip-dark-loading-color: var(--palette-koala-500);
+  --link-light-default-color: var(--palette-navy-300);
+  --link-light-hover-color: var(--palette-navy-500);
+  --link-light-active-color: var(--palette-navy-400);
+  --link-light-loading-color: var(--palette-navy-400);
+  --link-light-disabled-color: var(--palette-koala-700);
+  --link-dark-default-color: var(--palette-navy-800);
+  --link-dark-hover-color: var(--palette-navy-1000);
+  --link-dark-active-color: var(--palette-navy-900);
+  --link-dark-loading-color: var(--palette-navy-900);
+  --link-dark-disabled-color: var(--palette-koala-300);
+}
+
+.master {
+  --font-family: var(--font-inter);
+  --light-mode-bg-color: var(--white);
+  --button-light-bg-color: var(--palette-isabelline-6);
+  --button-light-font-color: var(--white);
+  --button-light-hover-bg-color: var(--palette-isabelline-4);
+  --button-light-active-bg-color: var(--palette-isabelline-5);
+  --button-light-disabled-bg-color: var(--palette-isabelline-3);
+  --button-light-disabled-font-color: var(--white);
+  --button-light-outline-font-color: var(--palette-isabelline-6);
+  --button-light-outline-hover-font-color: var(--palette-isabelline-4);
+  --button-light-outline-active-font-color: var(--palette-isabelline-5);
+  --button-light-outline-disabled-font-color: var(--palette-isabelline-3);
+  --button-light-text-font-color: var(--palette-isabelline-6);
+  --button-light-text-hover-font-color: var(--palette-isabelline-4);
+  --button-light-text-hover-bg-color: var(--palette-isabelline-0-5);
+  --button-light-text-active-bg-color: var(--palette-isabelline-1);
+  --button-light-text-active-font-color: var(--palette-isabelline-5);
+  --button-light-text-disabled-font-color: var(--palette-isabelline-3);
+  --dark-mode-bg-color: var(--palette-isabelline-8);
+  --button-dark-bg-color: var(--palette-isabelline-6);
+  --button-dark-font-color: var(--white);
+  --button-dark-hover-bg-color: var(--palette-isabelline-4);
+  --button-dark-active-bg-color: var(--palette-isabelline-5);
+  --button-dark-disabled-bg-color: var(--palette-isabelline-7);
+  --button-dark-disabled-font-color: var(--palette-isabelline-4);
+  --button-dark-outline-font-color: var(--palette-isabelline-2);
+  --button-dark-outline-hover-font-color: var(--palette-isabelline-0-5);
+  --button-dark-outline-active-font-color: var(--palette-isabelline-1);
+  --button-dark-outline-disabled-font-color: var(--palette-isabelline-7);
+  --button-dark-text-font-color: var(--palette-isabelline-2);
+  --button-dark-text-hover-font-color: var(--palette-isabelline-0-5);
+  --button-dark-text-hover-bg-color: var(--palette-isabelline-7);
+  --button-dark-text-active-font-color: var(--palette-isabelline-1);
+  --button-dark-text-active-bg-color: var(--palette-isabelline-7);
+  --button-dark-text-disabled-color: var(--palette-isabelline-7);
+  --pill-button-font-family: var(--font-inter);
+  --button-recommended-bg-color: var(--palette-sinbad-7);
+  --button-optional-bg-color: var(--palette-isabelline-9);
+  --button-modified-bg-color: var(--palette-isabelline-6);
+  --button-waived-bg-color: var(--palette-isabelline-3);
+  --tooltip-light-default-color: var(--palette-isabelline-4);
+  --tooltip-light-hover-color: var(--palette-isabelline-2);
+  --tooltip-light-active-color: var(--palette-isabelline-3);
+  --tooltip-light-loading-color: var(--palette-isabelline-3);
+  --tooltip-dark-default-color: var(--palette-isabelline-6);
+  --tooltip-dark-hover-color: var(--palette-isabelline-4);
+  --tooltip-dark-active-color: var(--palette-isabelline-5);
+  --tooltip-dark-loading-color: var(--palette-isabelline-5);
+  --link-light-default-color: var(--palette-cobalt-6);
+  --link-light-hover-color: var(--palette-cobalt-4);
+  --link-light-active-color: var(--palette-cobalt-5);
+  --link-light-loading-color: var(--palette-cobalt-6);
+  --link-light-disabled-color: var(--palette-isabelline-3);
+  --link-dark-default-color: var(--palette-cobalt-2);
+  --link-dark-hover-color: var(--palette-cobalt-0-5);
+  --link-dark-active-color: var(--palette-cobalt-1);
+  --link-dark-loading-color: var(--palette-cobalt-1);
+  --link-dark-disabled-color: var(--palette-isabelline-7);
+}
+
+.nayya {
+  --font-family: var(--font-inter);
+  --light-mode-bg-color: var(--white);
+  --button-light-bg-color: var(--palette-cobalt-6);
+  --button-light-font-color: var(--white);
+  --button-light-hover-bg-color: var(--palette-cobalt-4);
+  --button-light-active-bg-color: var(--palette-cobalt-5);
+  --button-light-disabled-bg-color: var(--palette-isabelline-3);
+  --button-light-disabled-font-color: var(--white);
+  --button-light-outline-font-color: var(--palette-cobalt-6);
+  --button-light-outline-hover-font-color: var(--palette-cobalt-4);
+  --button-light-outline-active-font-color: var(--palette-cobalt-5);
+  --button-light-outline-disabled-font-color: var(--palette-isabelline-3);
+  --button-light-text-font-color: var(--palette-cobalt-6);
+  --button-light-text-hover-font-color: var(--palette-cobalt-4);
+  --button-light-text-hover-bg-color: var(--palette-cobalt-0-5);
+  --button-light-text-active-bg-color: var(--palette-cobalt-1);
+  --button-light-text-active-font-color: var(--palette-cobalt-5);
+  --button-light-text-disabled-font-color: var(--palette-isabelline-3);
+  --dark-mode-bg-color: var(--palette-cobalt-8);
+  --button-dark-bg-color: var(--palette-cobalt-4);
+  --button-dark-font-color: var(--white);
+  --button-dark-hover-bg-color: var(--palette-cobalt-2);
+  --button-dark-active-bg-color: var(--palette-cobalt-3);
+  --button-dark-disabled-bg-color: var(--palette-isabelline-7);
+  --button-dark-disabled-font-color: var(--palette-isabelline-4);
+  --button-dark-outline-font-color: var(--palette-cobalt-2);
+  --button-dark-outline-hover-font-color: var(--palette-cobalt-0-5);
+  --button-dark-outline-active-font-color: var(--palette-cobalt-1);
+  --button-dark-outline-disabled-font-color: var(--palette-isabelline-7);
+  --button-dark-text-font-color: var(--palette-cobalt-2);
+  --button-dark-text-hover-font-color: var(--palette-cobalt-0-5);
+  --button-dark-text-hover-bg-color: var(--palette-cobalt-7);
+  --button-dark-text-active-font-color: var(--palette-cobalt-1);
+  --button-dark-text-active-bg-color: var(--palette-cobalt-7);
+  --button-dark-text-disabled-color: var(--palette-isabelline-7);
+  --pill-button-font-family: var(--font-inter);
+  --button-recommended-bg-color: var(--palette-sinbad-7);
+  --button-optional-bg-color: var(--palette-isabelline-9);
+  --button-modified-bg-color: var(--palette-isabelline-6);
+  --button-waived-bg-color: var(--palette-isabelline-3);
+  --tooltip-light-default-color: var(--palette-isabelline-4);
+  --tooltip-light-hover-color: var(--palette-isabelline-2);
+  --tooltip-light-active-color: var(--palette-isabelline-3);
+  --tooltip-light-loading-color: var(--palette-isabelline-3);
+  --tooltip-dark-default-color: var(--palette-isabelline-6);
+  --tooltip-dark-hover-color: var(--palette-isabelline-4);
+  --tooltip-dark-active-color: var(--palette-isabelline-5);
+  --tooltip-dark-loading-color: var(--palette-isabelline-5);
+  --link-light-default-color: var(--palette-cobalt-6);
+  --link-light-hover-color: var(--palette-cobalt-4);
+  --link-light-active-color: var(--palette-cobalt-5);
+  --link-light-loading-color: var(--palette-cobalt-6);
+  --link-light-disabled-color: var(--palette-isabelline-3);
+  --link-dark-default-color: var(--palette-cobalt-2);
+  --link-dark-hover-color: var(--palette-cobalt-0-5);
+  --link-dark-active-color: var(--palette-cobalt-1);
+  --link-dark-loading-color: var(--palette-cobalt-1);
+  --link-dark-disabled-color: var(--palette-isabelline-7);
+}
+
+.dark-mode {
+  background-color: var(--dark-mode-bg-color);
+}
+.dark-mode h2 {
+  color: var(--white);
+}
+
+.light-mode {
+  background-color: var(--light-mode-bg-color);
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+button {
+  background-color: transparent;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: bold;
+  color: var(--button-light-font-color);
+  padding: 0.75em 2.25em;
+  border-radius: 4px;
+  border: none;
+  box-sizing: border-box;
+}
+button.mini {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding: 0.857em 1.285em;
+}
+button.large {
+  line-height: 1rem;
+  padding: 0.75em 3.25em;
+}
+button.loading span {
+  border-radius: 50%;
+  display: inline-block;
+  width: 1rem;
+  border: 2px solid var(--button-light-font-color);
+  border-top: 2px solid var(--button-light-active-bg-color);
+  height: 1rem;
+  animation: loader 1s linear infinite;
+}
+button:hover {
+  cursor: pointer;
+}
+
+button.light {
+  background-color: var(--button-light-bg-color);
+  color: var(--button-light-font-color);
+}
+button.light.hover,
+button.light:hover {
+  background-color: var(--button-light-hover-bg-color);
+}
+button.light.active {
+  background-color: var(--button-light-active-bg-color);
+}
+button.light.loading {
+  background-color: var(--button-light-active-bg-color);
+  cursor: wait;
+}
+button.light.loading span {
+  border: 2px solid var(--button-light-font-color);
+  border-top: 2px solid var(--button-light-active-bg-color);
+}
+button.light.disabled,
+button.light:disabled {
+  background-color: var(--button-light-disabled-bg-color);
+  cursor: not-allowed;
+  color: var(--button-light-disabled-font-color);
+}
+
+button.light.outline {
+  background-color: transparent;
+  border: 1px solid var(--button-light-outline-font-color);
+  color: var(--button-light-outline-font-color);
+}
+button.light.outline.hover,
+button.light.outline:hover {
+  border-color: var(--button-light-outline-hover-font-color);
+  color: var(--button-light-outline-hover-font-color);
+}
+button.light.outline.active {
+  color: var(--button-light-outline-active-font-color);
+  border-color: var(--button-light-outline-active-font-color);
+}
+button.light.outline.loading {
+  border-color: var(--button-light-outline-active-font-color);
+  color: var(--button-light-outline-active-font-color);
+  cursor: wait;
+}
+button.light.outline.loading span {
+  border: 2px solid var(--button-light-bg-color);
+  border-top: 2px solid var(--button-light-font-color);
+}
+button.light.outline.disabled,
+button.light.outline:disabled {
+  border-color: var(--button-light-outline-disabled-font-color);
+  color: var(--button-light-outline-disabled-font-color);
+  cursor: not-allowed;
+}
+
+button.light.text {
+  background-color: transparent;
+  color: var(--button-light-text-font-color);
+}
+button.light.text.hover,
+button.light.text:hover {
+  color: var(--button-light-hover-bg-color);
+  background-color: var(--button-light-text-hover-bg-color);
+}
+button.light.text.active {
+  background-color: var(--button-light-text-active-bg-color);
+  color: var(--button-light-text-active-font-color);
+}
+button.light.text.loading {
+  cursor: wait;
+}
+button.light.text.loading:hover {
+  background: transparent;
+}
+button.light.text.loading span {
+  border: 2px solid var(--button-light-active-bg-color);
+  border-top: 2px solid var(--button-light-font-color);
+}
+button.light.text.disabled,
+button.light.text:disabled {
+  color: var(--button-light-text-disabled-font-color);
+  cursor: not-allowed;
+}
+button.light.text.disabled:hover,
+button.light.text:disabled:hover {
+  background: transparent;
+}
+
+button.light.link {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: var(--link-light-default-color);
+  border-radius: 0;
+  font-weight: 500;
+  box-sizing: content-box;
+  height: 20px;
+}
+button.light.link.hover,
+button.light.link:hover {
+  color: var(--link-light-hover-color);
+  background-color: transparent;
+  border-bottom: 2px solid var(--link-light-hover-color);
+}
+button.light.link.active {
+  background-color: transparent;
+  color: var(--link-light-active-color);
+  border-bottom: 2px solid var(--link-light-active-color);
+}
+button.light.link.loading {
+  cursor: wait;
+}
+button.light.link.loading:hover {
+  background: transparent;
+}
+button.light.link.disabled,
+button.light.link:disabled {
+  color: var(--link-light-disabled-color);
+  cursor: not-allowed;
+}
+button.light.link.disabled:hover,
+button.light.link:disabled:hover {
+  background: transparent;
+}
+
+button.marketing {
+  border-radius: 1.6875rem;
+}
+
+button.dark {
+  background-color: var(--button-dark-bg-color);
+  color: var(--button-dark-font-color);
+}
+button.dark.hover,
+button.dark:hover {
+  background-color: var(--button-dark-hover-bg-color);
+}
+button.dark.active {
+  background-color: var(--button-dark-active-bg-color);
+}
+button.dark.loading {
+  background-color: var(--button-dark-active-bg-color);
+  cursor: wait;
+}
+button.dark.loading span {
+  border-top: 2px solid var(--button-dark-active-bg-color);
+}
+button.dark.disabled,
+button.dark:disabled {
+  background-color: var(--button-dark-disabled-bg-color);
+  color: var(--button-dark-disabled-font-color);
+  cursor: not-allowed;
+}
+
+button.dark.outline {
+  background: transparent;
+  border: 1px solid var(--button-dark-outline-font-color);
+  color: var(--button-dark-outline-font-color);
+}
+button.dark.outline.hover,
+button.dark.outline:hover {
+  border-color: var(--button-dark-outline-hover-font-color);
+  color: var(--button-dark-outline-hover-font-color);
+}
+button.dark.outline.active {
+  border-color: var(--button-dark-outline-active-font-color);
+  color: var(--button-dark-outline-active-font-color);
+}
+button.dark.outline.loading {
+  border-color: var(--button-dark-outline-active-font-color);
+  color: var(--button-dark-outline-active-font-color);
+  cursor: wait;
+}
+button.dark.outline.loading span {
+  border-top: 2px solid transparent;
+}
+button.dark.outline.disabled,
+button.dark.outline:disabled {
+  border-color: var(--button-dark-outline-disabled-font-color);
+  color: var(--button-dark-outline-disabled-font-color);
+  cursor: not-allowed;
+}
+
+button.dark.text {
+  background-color: transparent;
+  color: var(--button-dark-text-font-color);
+}
+button.dark.text.hover,
+button.dark.text:hover {
+  background-color: var(--button-dark-text-hover-bg-color);
+  color: var(--button-dark-text-hover-font-color);
+}
+button.dark.text.active {
+  background-color: var(--button-dark-text-active-bg-color);
+  color: var(--button-dark-text-active-font-color);
+}
+button.dark.text.loading {
+  cursor: wait;
+}
+button.dark.text.loading:hover {
+  background: transparent;
+}
+button.dark.text.loading span {
+  border-top: 2px solid transparent;
+}
+button.dark.text.disabled,
+button.dark.text:disabled {
+  color: var(--button-dark-text-disabled-color);
+  cursor: not-allowed;
+}
+button.dark.text.disabled:hover,
+button.dark.text:disabled:hover {
+  background: transparent;
+}
+
+button.dark.link {
+  background-color: transparent;
+  color: var(--link-dark-default-color);
+  padding: 0;
+  border-radius: 0;
+  font-weight: 500;
+  box-sizing: content-box;
+  height: 20px;
+}
+button.dark.link.hover,
+button.dark.link:hover {
+  background-color: transparent;
+  color: var(--link-dark-hover-color);
+  border-bottom: 2px solid var(--link-dark-hover-color);
+}
+button.dark.link.active {
+  background-color: transparent;
+  color: var(--link-dark-active-color);
+  border-bottom: 2px solid var(--link-dark-active-color);
+}
+button.dark.link.loading {
+  cursor: wait;
+}
+button.dark.link.loading:hover {
+  background: transparent;
+}
+button.dark.link.loading span {
+  border-top: 2px solid transparent;
+}
+button.dark.link.disabled,
+button.dark.link:disabled {
+  color: var(--link-dark-disabled-color);
+  cursor: not-allowed;
+}
+button.dark.link.disabled:hover,
+button.dark.link:disabled:hover {
+  background: transparent;
+}
+
+button.pill {
+  border-radius: 13px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  font-family: var(--pill-button-font-family);
+}
+button.pill.recommended {
+  background-color: var(--button-recommended-bg-color);
+}
+button.pill.optional {
+  background-color: var(--button-optional-bg-color);
+}
+button.pill.modified {
+  background-color: var(--button-modified-bg-color);
+}
+button.pill.waived {
+  background-color: var(--button-waived-bg-color);
+}
+
+.tooltip {
+  box-sizing: border-box;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  display: inline-block;
+  padding: 3px;
+}
+.tooltip img {
+  width: 100%;
+  height: 100%;
+}
+.tooltip.large {
+  width: 16px;
+  height: 16px;
+}
+.tooltip.light {
+  background-color: var(--tooltip-light-default-color);
+}
+.tooltip.light.hover,
+.tooltip.light:hover {
+  cursor: pointer;
+  background-color: var(--tooltip-light-hover-color);
+}
+.tooltip.light.active {
+  background-color: var(--tooltip-light-active-color);
+}
+.tooltip.light.loading {
+  background-color: var(--tooltip-light-loading-color);
+}
+.tooltip.dark {
+  background-color: var(--tooltip-dark-default-color);
+}
+.tooltip.dark.hover,
+.tooltip.dark:hover {
+  cursor: pointer;
+  background-color: var(--tooltip-dark-hover-color);
+}
+.tooltip.dark.active {
+  background-color: var(--tooltip-dark-active-color);
+}
+.tooltip.dark.loading {
+  background-color: var(--tooltip-dark-loading-color);
+}
+
+a,
+.linkStyle {
+  font-family: var(--font-family);
+  padding-bottom: 2px;
+  font-size: 1rem;
+  display: inline-block;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+a.light,
+.linkStyle.light {
+  color: var(--link-light-default-color);
+}
+a.light.hover,
+a.light:hover,
+a.light.hover.linkFunctionality a.light:hover.linkFunctionality,
+.linkStyle.light.hover,
+.linkStyle.light:hover,
+a.light.hover.linkFunctionality .linkStyle.light:hover.linkFunctionality,
+.linkStyle.light.hover.linkFunctionality a.light:hover.linkFunctionality,
+.linkStyle.light.hover.linkFunctionality
+  .linkStyle.light:hover.linkFunctionality {
+  color: var(--link-light-hover-color);
+  border-bottom: 2px solid var(--link-light-hover-color);
+}
+a.light.active,
+a.light.active.linkFunctionality,
+.linkStyle.light.active,
+.linkStyle.light.active.linkFunctionality {
+  color: var(--link-light-active-color);
+  border-bottom: 2px solid var(--link-light-active-color);
+}
+a.light.loading::before,
+.linkStyle.light.loading::before {
+  content: '';
+  margin-right: 5px;
+  color: var(--link-light-loading-color);
+  border-radius: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  box-sizing: border-box;
+  border: 2px solid var(--link-light-loading-color);
+  border-top: 2px solid transparent;
+  animation: loader 1s linear infinite;
+}
+a.light.disabled,
+a.light:disabled,
+a.light.disabled.linkFunctionality,
+a.light:disabled.linkFunctionality,
+.linkStyle.light.disabled,
+.linkStyle.light:disabled,
+.linkStyle.light.disabled.linkFunctionality,
+.linkStyle.light:disabled.linkFunctionality {
+  color: var(--link-light-disabled-color);
+}
+a.dark,
+.linkStyle.dark {
+  color: var(--link-dark-default-color);
+}
+a.dark.hover,
+a.dark:hover,
+a.dark.hover.linkFunctionality a.dark:hover.linkFunctionality,
+.linkStyle.dark.hover,
+.linkStyle.dark:hover,
+a.dark.hover.linkFunctionality .linkStyle.dark:hover.linkFunctionality,
+.linkStyle.dark.hover.linkFunctionality a.dark:hover.linkFunctionality,
+.linkStyle.dark.hover.linkFunctionality
+  .linkStyle.dark:hover.linkFunctionality {
+  color: var(--link-dark-hover-color);
+  border-bottom: 2px solid var(--link-dark-hover-color);
+}
+a.dark.active,
+a.dark.active.linkFunctionality,
+.linkStyle.dark.active,
+.linkStyle.dark.active.linkFunctionality {
+  color: var(--link-dark-active-color);
+  border-bottom: 2px solid var(--link-dark-active-color);
+}
+a.dark.loading::before,
+.linkStyle.dark.loading::before {
+  content: '';
+  margin-right: 5px;
+  color: var(--link-dark-loading-color);
+  border-radius: 50%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  box-sizing: border-box;
+  border: 2px solid var(--link-dark-loading-color);
+  border-top: 2px solid transparent;
+  animation: loader 1s linear infinite;
+}
+a.dark.disabled,
+a.dark:disabled,
+a.dark.disabled.linkFunctionality,
+a.dark:disabled.linkFunctionality,
+.linkStyle.dark.disabled,
+.linkStyle.dark:disabled,
+.linkStyle.dark.disabled.linkFunctionality,
+.linkStyle.dark:disabled.linkFunctionality {
+  color: var(--link-dark-disabled-color);
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Regular.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Italic.ttf')
+    format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Medium.ttf')
+    format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-MediumItalic.ttf')
+    format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-SemiBold.ttf')
+    format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-SemiBoldItalic.ttf')
+    format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.ttf')
+      format('truetype'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.woff')
+      format('woff'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.woff2')
+      format('woff2'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.eot')
+      format('embedded-opentype'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.svg')
+      format('svg');
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Book.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Medium.otf')
+    format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Bold.otf')
+    format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Black.otf')
+    format('opentype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Regular.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Book.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Medium.otf')
+    format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Bold.otf')
+    format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Black.otf')
+    format('opentype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Inter/Inter-Medium.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Inter/Inter-Bold.ttf')
+    format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Gilroy/Gilroy-ExtraBold.otf')
+    format('opentype');
+}
+:root {
+  --black: #000;
+  --white: #fff;
+  --palette-nero-1000: #fafafa;
+  --palette-nero-900: #f5f5f5;
+  --palette-nero-800: #c7c7c7;
+  --palette-nero-700: #b6b6b6;
+  --palette-nero-600: #9d9d9d;
+  --palette-nero-500: #858585;
+  --palette-nero-400: #6f6f6f;
+  --palette-nero-300: #595959;
+  --palette-nero-200: #323232;
+  --palette-nero-100: #191919;
+  --palette-koamaru-1000: #e3e3fa;
+  --palette-koamaru-900: #cacaf5;
+  --palette-koamaru-800: #9a9af0;
+  --palette-koamaru-700: #6767e8;
+  --palette-koamaru-600: #3535e1;
+  --palette-koamaru-500: #1d1dbf;
+  --palette-koamaru-400: #15158c;
+  --palette-koamaru-300: #111170;
+  --palette-koamaru-200: #0d0d54;
+  --palette-koamaru-100: #080838;
+  --palette-violet-1000: #efe3fa;
+  --palette-violet-900: #e0caf5;
+  --palette-violet-800: #c59af0;
+  --palette-violet-700: #a867e8;
+  --palette-violet-600: #8b35e1;
+  --palette-violet-500: #6e1dbf;
+  --palette-violet-400: #51158c;
+  --palette-violet-300: #411170;
+  --palette-violet-200: #310d54;
+  --palette-violet-100: #200838;
+  --palette-cinnabar-1000: #faebeb;
+  --palette-cinnabar-900: #fadcdc;
+  --palette-cinnabar-800: #f09a9a;
+  --palette-cinnabar-700: #e86868;
+  --palette-cinnabar-600: #de3535;
+  --palette-cinnabar-500: #bf1d1d;
+  --palette-cinnabar-400: #9f1818;
+  --palette-cinnabar-300: #7f1313;
+  --palette-cinnabar-200: #600f0f;
+  --palette-cinnabar-100: #400a0a;
+  --palette-eucalyptus-1000: #ebfaf1;
+  --palette-eucalyptus-900: #d7f5e4;
+  --palette-eucalyptus-800: #79e2a6;
+  --palette-eucalyptus-700: #36d379;
+  --palette-eucalyptus-600: #219653;
+  --palette-eucalyptus-500: #1c8147;
+  --palette-eucalyptus-400: #186b3b;
+  --palette-eucalyptus-300: #13562f;
+  --palette-eucalyptus-200: #0e4024;
+  --palette-eucalyptus-100: #092b18;
+  --palette-hacienda-1000: #faf5de;
+  --palette-hacienda-900: #f5ecc2;
+  --palette-hacienda-800: #ebd986;
+  --palette-hacienda-700: #e1c649;
+  --palette-hacienda-600: #c4a720;
+  --palette-hacienda-500: #877316;
+  --palette-hacienda-400: #716012;
+  --palette-hacienda-300: #5a4d0f;
+  --palette-hacienda-200: #443a0b;
+  --palette-hacienda-100: #2d2607;
+  --palette-koala-1000: #f7f6f4;
+  --palette-koala-900: #f2f0ed;
+  --palette-koala-800: #e3dfda;
+  --palette-koala-700: #cdc7c2;
+  --palette-koala-600: #b2aba5;
+  --palette-koala-500: #938c85;
+  --palette-koala-400: #726c66;
+  --palette-koala-300: #544e4a;
+  --palette-koala-200: #393533;
+  --palette-koala-100: #262321;
+  --palette-navy-1000: #e8effa;
+  --palette-navy-900: #d8e5f9;
+  --palette-navy-800: #bad1f5;
+  --palette-navy-700: #9abaef;
+  --palette-navy-600: #7ca1e6;
+  --palette-navy-500: #5f86d8;
+  --palette-navy-400: #476bc3;
+  --palette-navy-300: #324fa5;
+  --palette-navy-200: #20337d;
+  --palette-navy-100: #121c4e;
+  --palette-puprple-1000: #ece8f8;
+  --palette-puprple-900: #e3ddf4;
+  --palette-puprple-800: #d3c5ec;
+  --palette-puprple-700: #b9ace2;
+  --palette-puprple-600: #a494d6;
+  --palette-puprple-500: #8f7dc5;
+  --palette-puprple-400: #7967ae;
+  --palette-puprple-300: #5f4b92;
+  --palette-puprple-200: #413069;
+  --palette-puprple-100: #2a1d47;
+  --palette-red-1000: #fad9d9;
+  --palette-red-900: #f9c4c3;
+  --palette-red-800: #f79a96;
+  --palette-red-700: #f3776f;
+  --palette-red-600: #ec5b4e;
+  --palette-red-500: #de4635;
+  --palette-red-400: #c53422;
+  --palette-red-300: #9c2514;
+  --palette-red-200: #71190c;
+  --palette-red-100: #4e1007;
+  --palette-green-1000: #dbf7dc;
+  --palette-green-900: #c2f2c3;
+  --palette-green-800: #99e596;
+  --palette-green-700: #7cd273;
+  --palette-green-600: #65ba58;
+  --palette-green-500: #529c42;
+  --palette-green-400: #407b30;
+  --palette-green-300: #2f5b22;
+  --palette-green-200: #214017;
+  --palette-green-100: #162a0f;
+  --palette-amber-1000: #f8eed9;
+  --palette-amber-900: #f5e3c0;
+  --palette-amber-800: #efcc8d;
+  --palette-amber-700: #e6b25d;
+  --palette-amber-600: #db9431;
+  --palette-amber-500: #cc730d;
+  --palette-amber-400: #b65700;
+  --palette-amber-300: #983f00;
+  --palette-amber-200: #772900;
+  --palette-amber-100: #601b00;
+  --palette-isabelline-9: #1d1d1b;
+  --palette-isabelline-8: #393936;
+  --palette-isabelline-7: #565651;
+  --palette-isabelline-6: #73736c;
+  --palette-isabelline-5: #8f8f88;
+  --palette-isabelline-4: #aaaaa5;
+  --palette-isabelline-3: #c5c5c1;
+  --palette-isabelline-2: #e0e0de;
+  --palette-isabelline-1: #f0f0ef;
+  --palette-isabelline-0-5: #f7f7f6;
+  --palette-cobalt-8: #001842;
+  --palette-cobalt-7: #002563;
+  --palette-cobalt-6: #003184;
+  --palette-cobalt-5: #003da5;
+  --palette-cobalt-4: #0030ea;
+  --palette-cobalt-3: #307dff;
+  --palette-cobalt-2: #75a8ff;
+  --palette-cobalt-1: #bad4ff;
+  --palette-cobalt-0-5: #deeaff;
+  --palette-watermelon-0-5: #ffebf0;
+  --palette-watermelon-6: #f5003b;
+  --palette-sazerac-6: #d57900;
+  --palette-sinbad-7: #357980;
+  --white: #fff;
+  --black: #000;
+  --font-circular: 'Circular20', sans-serif;
+  --font-work-sans: 'Work Sans', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-gilroy: 'Gilroy', sans-serif;
+}
+
+.nayya,
+.master {
+  --font-family: var(--font-inter);
+  --label-font-color: var(--palette-isabelline-6);
+  --label-position: absolute;
+  --label-font-size: 1rem;
+  --default-input-padding: 1.2rem 0.75rem;
+  --filled-input-padding: 1.5rem 0.75rem 0.75rem;
+  --spinner-top-position: 1.5rem;
+  --action-btn-top-position: 1.5rem;
+  --action-btn-right-position: 0.5rem;
+  --input-selected-color: var(--palette-cobalt-5);
+  --input-error-color: var(--palette-watermelon-6);
+  --input-warning-color: var(--palette-sazerac-6);
+  --input-default-color: var(--palette-isabelline-2);
+  --input-disabled-color: var(--palette-isabelline-3);
+  --input-disabled-bg-color: var(--palette-isabelline-1);
+  --selector-group-border: 1px solid var(--palette-isabelline-3);
+  --selector-group-hover-border-color: 1px solid var(--palette-isabelline-3);
+  --selector-group-checkbox-icon-br: 50%;
+  --selector-group-radio-icon-br: 50%;
+  --selected-filled-bg: url('https://nayya-static-assets.s3.amazonaws.com/images/icons/CheckMark/CheckMarkWhite-medium.svg');
+  --select-label-padding: 1rem;
+  --list-item-active-bg-color: var(--palette-cobalt-5);
+  --list-item-active-color: var(--white);
+}
+
+.adp {
+  --font-family: var(--font-circular);
+  --label-font-color: var(--palette-koala-7);
+  --label-position: static;
+  --label-font-size: 0.75rem;
+  --default-input-padding: 0.7rem;
+  --filled-input-padding: 0.7rem;
+  --spinner-top-position: 2.25rem;
+  --action-btn-top-position: 2rem;
+  --action-btn-right-position: 2rem;
+  --input-selected-color: var(--palette-navy-400);
+  --input-error-color: var(--palette-red-500);
+  --input-warning-color: var(--palette-amber-600);
+  --input-default-color: var(--palette-koala-500);
+  --input-disabled-color: var(--palette-koala-500);
+  --input-disabled-bg-color: var(--palette-koala-900);
+  --selector-group-border: none;
+  --selector-group-hover-border-color: none;
+  --selected-filled-bg: url('https://nayya-static-assets.s3.amazonaws.com/images/icons/CheckMark/CheckMark-medium.svg');
+  --selector-group-checkbox-icon-br: 6px;
+  --selector-group-radio-icon-br: 50%;
+  --select-label-padding: 0;
+  --list-item-active-bg-color: var(--palette-cobalt-5);
+  --list-item-active-color: var(--palette-navy-900);
+}
+
+.form-input-group {
+  font-family: var(--font-family);
+  position: relative;
+  letter-spacing: -0.5px;
+}
+.form-input-group label {
+  display: block;
+  font-size: var(--label-font-size);
+  position: var(--label-position);
+  top: 1.6rem;
+  left: 0.75rem;
+  color: var(--label-font-color);
+}
+.form-input-group input {
+  margin-top: 0.35rem;
+  padding: var(--default-input-padding);
+  font-size: 1rem;
+  border: 1px solid var(--input-default-color);
+  border-radius: 4px;
+  width: 296px;
+  box-sizing: border-box;
+}
+.form-input-group input:focus {
+  outline: none;
+}
+.form-input-group span.helper {
+  display: block;
+  font-size: 0.875rem;
+  padding: 0.75rem;
+  color: var(--label-font-color);
+}
+.form-input-group.filled input {
+  padding: var(--filled-input-padding);
+}
+.form-input-group.filled label {
+  font-size: 0.75rem;
+  top: 0.85rem;
+}
+.form-input-group.loading input {
+  padding-left: 2rem;
+}
+.form-input-group.loading label {
+  left: 2rem;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.form-input-group.loading span.spinner {
+  left: 0.5rem;
+  border: 2px solid var(--input-default-color);
+  border-top: 2px solid transparent;
+  animation: spinner linear infinite 1000ms;
+  width: 18px;
+  height: 18px;
+  outline: none;
+  position: absolute;
+  top: var(--spinner-top-position);
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: inline-block;
+}
+.form-input-group.outline input {
+  outline: 2px solid var(--input-selected-color);
+}
+.form-input-group.outline span.spinner {
+  border: 2px solid var(--input-selected-color);
+  border-top: 2px solid transparent;
+}
+.form-input-group.warning input {
+  outline: 2px solid var(--input-warning-color);
+}
+.form-input-group.warning span.helper {
+  color: var(--input-warning-color);
+}
+.form-input-group.warning span.spinner {
+  border: 2px solid var(--input-warning-color);
+  border-top: 2px solid transparent;
+}
+.form-input-group.error input {
+  outline: 2px solid var(--input-error-color);
+}
+.form-input-group.error span.helper {
+  color: var(--input-error-color);
+}
+.form-input-group.error span.spinner {
+  border: 2px solid var(--input-error-color);
+  border-top: 2px solid transparent;
+}
+.form-input-group.action input {
+  padding-right: 4.5rem;
+}
+.form-input-group.action button.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--input-selected-color);
+  font-weight: 600;
+  position: absolute;
+  right: var(--action-btn-right-position);
+  top: var(--action-btn-top-position);
+}
+.form-input-group.action button.btn:hover {
+  cursor: pointer;
+}
+.form-input-group.disabled label,
+.form-input-group.disabled span {
+  color: var(--input-disabled-color);
+}
+.form-input-group.disabled input {
+  color: var(--input-disabled-color);
+  background-color: var(--input-disabled-bg-color);
+}
+.form-input-group.disabled button.btn {
+  color: var(--input-disabled-color);
+}
+.form-input-group.disabled button.btn:hover {
+  cursor: not-allowed;
+}
+
+.select-input-group {
+  font-family: var(--font-family);
+  position: relative;
+  letter-spacing: -0.5px;
+  box-sizing: border-box;
+}
+.select-input-group label {
+  box-sizing: border-box;
+  background-color: #fff;
+  display: block;
+  position: var(--label-position);
+  font-size: var(--label-font-size);
+  color: var(--label-font-color);
+  top: 10px;
+  left: 5px;
+  width: 85%;
+  padding: var(--select-label-padding);
+  z-index: 9999;
+}
+.select-input-group select {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: var(--default-input-padding);
+  font-size: 1rem;
+  border: 1px solid var(--input-default-color);
+  border-radius: 4px;
+  width: 296px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  background: url('https://nayya-static-assets.s3.amazonaws.com/images/icons/ArrowDown/ArrowDown-medium.svg')
+    #fff 95% no-repeat;
+}
+.select-input-group select:focus {
+  outline: none;
+}
+.select-input-group span.helper {
+  display: block;
+  font-size: 0.875rem;
+  padding: 0.75rem;
+  color: var(--label-font-color);
+}
+.select-input-group.filled select {
+  padding: var(--filled-input-padding);
+}
+.select-input-group.filled label {
+  padding: 0;
+  font-size: 12px;
+  left: 12px;
+  top: 12px;
+}
+.select-input-group.active select {
+  border: 2px solid var(--input-selected-color);
+}
+.select-input-group.error select {
+  border: 2px solid var(--input-error-color);
+}
+.select-input-group.error span.helper {
+  color: var(--input-error-color);
+}
+.select-input-group.warning select {
+  border: 2px solid var(--input-warning-color);
+}
+.select-input-group.warning span.helper {
+  color: var(--input-warning-color);
+}
+.select-input-group.disabled {
+  cursor: not-allowed;
+}
+.select-input-group.disabled select {
+  cursor: not-allowed;
+  background: url('https://nayya-static-assets.s3.amazonaws.com/images/icons/ArrowDown/ArrowDownDisabled-medium.svg')
+    95% no-repeat;
+  color: var(--input-disabled-color);
+  background-color: var(--input-disabled-bg-color);
+  border: 2px solid var(--input-disabled-color);
+}
+.select-input-group.disabled label {
+  cursor: not-allowed;
+  color: var(--input-disabled-color);
+  background-color: transparent;
+}
+.select-input-group.disabled span.helper {
+  color: var(--input-disabled-color);
+}
+
+.selectors-input-group {
+  font-family: var(--font-family);
+  border-radius: 4px;
+  border: var(--selector-group-border);
+  width: 135px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+}
+.selectors-input-group label {
+  margin-top: 6px;
+}
+.selectors-input-group label::before {
+  box-sizing: border-box;
+  content: '';
+  position: relative;
+  top: 5px;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: bottom;
+  background-color: #fff;
+  border: 2px solid var(--input-disabled-color);
+}
+.selectors-input-group input[type='checkbox'] + label::before {
+  border-radius: var(--selector-group-checkbox-icon-br);
+}
+.selectors-input-group input[type='radio'] + label::before {
+  border-radius: var(--selector-group-radio-icon-br);
+}
+.selectors-input-group input[type='radio'],
+.selectors-input-group input[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+}
+.selectors-input-group.hover,
+.selectors-input-group:hover {
+  cursor: pointer;
+}
+.selectors-input-group.hover:not(.text-only),
+.selectors-input-group:hover:not(.text-only) {
+  border: 1px solid #aaaaa5;
+}
+.selectors-input-group.hover label::before,
+.selectors-input-group:hover label::before {
+  border: 2px solid #aaaaa5;
+}
+.selectors-input-group.hover label:hover,
+.selectors-input-group.hover input:hover,
+.selectors-input-group:hover label:hover,
+.selectors-input-group:hover input:hover {
+  cursor: pointer;
+}
+.selectors-input-group.disabled {
+  cursor: not-allowed;
+}
+.selectors-input-group.disabled input,
+.selectors-input-group.disabled label {
+  color: #8f8f88;
+}
+.selectors-input-group.disabled input:hover,
+.selectors-input-group.disabled label:hover {
+  cursor: not-allowed;
+}
+.selectors-input-group.disabled:not(.text-only) {
+  border: 1px solid var(--input-disabled-color);
+  background-color: var(--input-disabled-bg-color);
+}
+.selectors-input-group.disabled label::before {
+  border: 2px solid #aaaaa5;
+  background-color: var(--input-disabled-bg-color);
+}
+.selectors-input-group.selected-bullet label::after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 17px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--input-selected-color);
+}
+.selectors-input-group.selected-bullet:not(.text-only) {
+  border: 2px solid var(--input-selected-color);
+}
+.selectors-input-group.selected-bullet.illustration label::after {
+  top: 103px;
+  left: 29px;
+}
+.selectors-input-group.selected-outline:not(.disabled) label::before {
+  border-width: 6px;
+  border-color: var(--input-selected-color);
+}
+.selectors-input-group.selected-outline.disabled label::before {
+  border-width: 6px;
+  border-color: var(--input-disabled-color);
+}
+.selectors-input-group.selected-filled.disabled label::before {
+  background: url('https://nayya-static-assets.s3.amazonaws.com/images/icons/CheckMark/CheckMarkWhite-small.svg')
+    no-repeat center;
+  background-color: var(--input-disabled-color);
+  border: 2px solid var(--input-disabled-color);
+}
+.selectors-input-group.selected-filled:not(.disabled) label::before {
+  background: var(--selected-filled-bg) no-repeat center;
+  background-color: var(--input-selected-color);
+  border: 2px solid var(--input-selected-color);
+}
+.selectors-input-group.text-only {
+  border: none;
+}
+.selectors-input-group.illustration {
+  height: 176px;
+  width: 72px;
+  flex-direction: column;
+  justify-content: center;
+}
+.selectors-input-group.illustration img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.selectors-input-group.illustration label {
+  margin: 0;
+  text-align: center;
+  padding: 20px 0;
+}
+.selectors-input-group.illustration label::before {
+  top: 0;
+  margin: 0px 10px 15px;
+  bottom: 15px;
+  vertical-align: text-top;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Regular.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Italic.ttf')
+    format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Medium.ttf')
+    format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-MediumItalic.ttf')
+    format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-SemiBold.ttf')
+    format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-SemiBoldItalic.ttf')
+    format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.ttf')
+      format('truetype'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.woff')
+      format('woff'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.woff2')
+      format('woff2'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.eot')
+      format('embedded-opentype'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.svg')
+      format('svg');
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Book.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Medium.otf')
+    format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Bold.otf')
+    format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Black.otf')
+    format('opentype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Regular.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Book.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Medium.otf')
+    format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Bold.otf')
+    format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Black.otf')
+    format('opentype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Inter/Inter-Medium.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Inter/Inter-Bold.ttf')
+    format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Gilroy/Gilroy-ExtraBold.otf')
+    format('opentype');
+}
+:root {
+  --black: #000;
+  --white: #fff;
+  --palette-nero-1000: #fafafa;
+  --palette-nero-900: #f5f5f5;
+  --palette-nero-800: #c7c7c7;
+  --palette-nero-700: #b6b6b6;
+  --palette-nero-600: #9d9d9d;
+  --palette-nero-500: #858585;
+  --palette-nero-400: #6f6f6f;
+  --palette-nero-300: #595959;
+  --palette-nero-200: #323232;
+  --palette-nero-100: #191919;
+  --palette-koamaru-1000: #e3e3fa;
+  --palette-koamaru-900: #cacaf5;
+  --palette-koamaru-800: #9a9af0;
+  --palette-koamaru-700: #6767e8;
+  --palette-koamaru-600: #3535e1;
+  --palette-koamaru-500: #1d1dbf;
+  --palette-koamaru-400: #15158c;
+  --palette-koamaru-300: #111170;
+  --palette-koamaru-200: #0d0d54;
+  --palette-koamaru-100: #080838;
+  --palette-violet-1000: #efe3fa;
+  --palette-violet-900: #e0caf5;
+  --palette-violet-800: #c59af0;
+  --palette-violet-700: #a867e8;
+  --palette-violet-600: #8b35e1;
+  --palette-violet-500: #6e1dbf;
+  --palette-violet-400: #51158c;
+  --palette-violet-300: #411170;
+  --palette-violet-200: #310d54;
+  --palette-violet-100: #200838;
+  --palette-cinnabar-1000: #faebeb;
+  --palette-cinnabar-900: #fadcdc;
+  --palette-cinnabar-800: #f09a9a;
+  --palette-cinnabar-700: #e86868;
+  --palette-cinnabar-600: #de3535;
+  --palette-cinnabar-500: #bf1d1d;
+  --palette-cinnabar-400: #9f1818;
+  --palette-cinnabar-300: #7f1313;
+  --palette-cinnabar-200: #600f0f;
+  --palette-cinnabar-100: #400a0a;
+  --palette-eucalyptus-1000: #ebfaf1;
+  --palette-eucalyptus-900: #d7f5e4;
+  --palette-eucalyptus-800: #79e2a6;
+  --palette-eucalyptus-700: #36d379;
+  --palette-eucalyptus-600: #219653;
+  --palette-eucalyptus-500: #1c8147;
+  --palette-eucalyptus-400: #186b3b;
+  --palette-eucalyptus-300: #13562f;
+  --palette-eucalyptus-200: #0e4024;
+  --palette-eucalyptus-100: #092b18;
+  --palette-hacienda-1000: #faf5de;
+  --palette-hacienda-900: #f5ecc2;
+  --palette-hacienda-800: #ebd986;
+  --palette-hacienda-700: #e1c649;
+  --palette-hacienda-600: #c4a720;
+  --palette-hacienda-500: #877316;
+  --palette-hacienda-400: #716012;
+  --palette-hacienda-300: #5a4d0f;
+  --palette-hacienda-200: #443a0b;
+  --palette-hacienda-100: #2d2607;
+  --palette-koala-1000: #f7f6f4;
+  --palette-koala-900: #f2f0ed;
+  --palette-koala-800: #e3dfda;
+  --palette-koala-700: #cdc7c2;
+  --palette-koala-600: #b2aba5;
+  --palette-koala-500: #938c85;
+  --palette-koala-400: #726c66;
+  --palette-koala-300: #544e4a;
+  --palette-koala-200: #393533;
+  --palette-koala-100: #262321;
+  --palette-navy-1000: #e8effa;
+  --palette-navy-900: #d8e5f9;
+  --palette-navy-800: #bad1f5;
+  --palette-navy-700: #9abaef;
+  --palette-navy-600: #7ca1e6;
+  --palette-navy-500: #5f86d8;
+  --palette-navy-400: #476bc3;
+  --palette-navy-300: #324fa5;
+  --palette-navy-200: #20337d;
+  --palette-navy-100: #121c4e;
+  --palette-puprple-1000: #ece8f8;
+  --palette-puprple-900: #e3ddf4;
+  --palette-puprple-800: #d3c5ec;
+  --palette-puprple-700: #b9ace2;
+  --palette-puprple-600: #a494d6;
+  --palette-puprple-500: #8f7dc5;
+  --palette-puprple-400: #7967ae;
+  --palette-puprple-300: #5f4b92;
+  --palette-puprple-200: #413069;
+  --palette-puprple-100: #2a1d47;
+  --palette-red-1000: #fad9d9;
+  --palette-red-900: #f9c4c3;
+  --palette-red-800: #f79a96;
+  --palette-red-700: #f3776f;
+  --palette-red-600: #ec5b4e;
+  --palette-red-500: #de4635;
+  --palette-red-400: #c53422;
+  --palette-red-300: #9c2514;
+  --palette-red-200: #71190c;
+  --palette-red-100: #4e1007;
+  --palette-green-1000: #dbf7dc;
+  --palette-green-900: #c2f2c3;
+  --palette-green-800: #99e596;
+  --palette-green-700: #7cd273;
+  --palette-green-600: #65ba58;
+  --palette-green-500: #529c42;
+  --palette-green-400: #407b30;
+  --palette-green-300: #2f5b22;
+  --palette-green-200: #214017;
+  --palette-green-100: #162a0f;
+  --palette-amber-1000: #f8eed9;
+  --palette-amber-900: #f5e3c0;
+  --palette-amber-800: #efcc8d;
+  --palette-amber-700: #e6b25d;
+  --palette-amber-600: #db9431;
+  --palette-amber-500: #cc730d;
+  --palette-amber-400: #b65700;
+  --palette-amber-300: #983f00;
+  --palette-amber-200: #772900;
+  --palette-amber-100: #601b00;
+  --palette-isabelline-9: #1d1d1b;
+  --palette-isabelline-8: #393936;
+  --palette-isabelline-7: #565651;
+  --palette-isabelline-6: #73736c;
+  --palette-isabelline-5: #8f8f88;
+  --palette-isabelline-4: #aaaaa5;
+  --palette-isabelline-3: #c5c5c1;
+  --palette-isabelline-2: #e0e0de;
+  --palette-isabelline-1: #f0f0ef;
+  --palette-isabelline-0-5: #f7f7f6;
+  --palette-cobalt-8: #001842;
+  --palette-cobalt-7: #002563;
+  --palette-cobalt-6: #003184;
+  --palette-cobalt-5: #003da5;
+  --palette-cobalt-4: #0030ea;
+  --palette-cobalt-3: #307dff;
+  --palette-cobalt-2: #75a8ff;
+  --palette-cobalt-1: #bad4ff;
+  --palette-cobalt-0-5: #deeaff;
+  --palette-watermelon-0-5: #ffebf0;
+  --palette-watermelon-6: #f5003b;
+  --palette-sazerac-6: #d57900;
+  --palette-sinbad-7: #357980;
+  --white: #fff;
+  --black: #000;
+  --font-circular: 'Circular20', sans-serif;
+  --font-work-sans: 'Work Sans', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-gilroy: 'Gilroy', sans-serif;
+}
+
+.nayya,
+.master {
+  --logo-primary-color: var(--palette-cobalt-6);
+  --logo-secondary-color: var(--white);
+  --body-font-family: var(--font-inter);
+  --logo-font-family: var(--font-gilroy);
+}
+
+.adp {
+  --logo-primary-color: var(--palette-navy-400);
+  --logo-secondary-color: var(--white);
+  --logo-font-family: var(--font-circular);
+  --body-font-family: var(--font-circular);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.superLarge,
+.super,
+.superSmall {
+  color: var(--palette-nero-100);
+  font-family: var(--font-circular);
+  margin: 0;
+}
+
+p,
+span,
+div,
+a,
+caption,
+button,
+input,
+textarea,
+select,
+option,
+label,
+legend,
+fieldset,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+table,
+thead,
+tbody,
+tr,
+th,
+td,
+img,
+svg,
+video,
+audio,
+iframe,
+object,
+embed,
+canvas {
+  font-family: var(--body-font-family);
+  margin: 0;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.logoPrimary {
+  color: var(--logo-primary-color);
+  font-family: var(--logo-font-family);
+  font-weight: bold;
+}
+
+.logoSecondary {
+  color: var(--logo-secondary-color);
+  font-family: var(--logo-font-family);
+  font-weight: bold;
+}
+
+.superLarge,
+.super,
+.superSmall {
+  font-weight: 900;
+}
+
+.superLarge {
+  letter-spacing: -3px;
+  font-size: 7.5rem;
+  line-height: 8.5rem;
+}
+
+.super {
+  letter-spacing: -2px;
+  font-size: 5.625rem;
+  line-height: 6.375rem;
+}
+
+.superSmall {
+  letter-spacing: -1.5px;
+  font-size: 4.1875rem;
+  line-height: 4.75rem;
+}
+
+h1,
+.heading1,
+h2,
+.heading2,
+h3,
+.heading3,
+h4,
+.heading4,
+h5,
+.heading5 {
+  font-weight: bold;
+}
+
+h1,
+.heading1 {
+  letter-spacing: -1px;
+  font-size: 3.1875rem;
+  line-height: 4.25rem;
+}
+
+h2,
+.heading2 {
+  letter-spacing: -1px;
+  font-size: 2.375rem;
+  line-height: 3.25rem;
+}
+
+h3,
+.heading3 {
+  letter-spacing: -0.5px;
+  font-size: 1.75rem;
+  line-height: 2.375rem;
+}
+
+h4,
+.heading4 {
+  letter-spacing: -0.5px;
+  font-size: 1.3125rem;
+  line-height: 1.875rem;
+}
+
+h5,
+.heading5 {
+  letter-spacing: -0.5px;
+  font-size: 1rem;
+  line-height: 1.875rem;
+}
+
+.bodyLarge {
+  letter-spacing: -0.5px;
+  font-size: 1.3125rem;
+  line-height: 2.25rem;
+}
+
+.body {
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.bodySmall {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.finePrint {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+.labelHuge {
+  letter-spacing: -0.5px;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+.labelLarge {
+  letter-spacing: -0.5px;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+
+.label {
+  letter-spacing: -0.5px;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+
+.labelSmall {
+  letter-spacing: -0.5px;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+}
+
+.label.bold,
+.labelSmall.bold,
+.labelLarge.bold,
+.labelHuge.bold {
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Regular.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Italic.ttf')
+    format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-Medium.ttf')
+    format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-MediumItalic.ttf')
+    format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-SemiBold.ttf')
+    format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/WorkSans/WorkSans-SemiBoldItalic.ttf')
+    format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.ttf')
+      format('truetype'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.woff')
+      format('woff'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.woff2')
+      format('woff2'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.eot')
+      format('embedded-opentype'),
+    url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle/CircularMedium.svg')
+      format('svg');
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Book.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Medium.otf')
+    format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Bold.otf')
+    format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Circular20';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Circle20/Circle20/Circular20-Black.otf')
+    format('opentype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Regular.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Book.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Medium.otf')
+    format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Bold.otf')
+    format('opentype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'CircularXX';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/CircleXX/CircularXX-Black.otf')
+    format('opentype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Inter/Inter-Medium.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Inter/Inter-Bold.ttf')
+    format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://nayya-static-assets.s3.amazonaws.com/fonts/Gilroy/Gilroy-ExtraBold.otf')
+    format('opentype');
+}
+:root {
+  --black: #000;
+  --white: #fff;
+  --palette-nero-1000: #fafafa;
+  --palette-nero-900: #f5f5f5;
+  --palette-nero-800: #c7c7c7;
+  --palette-nero-700: #b6b6b6;
+  --palette-nero-600: #9d9d9d;
+  --palette-nero-500: #858585;
+  --palette-nero-400: #6f6f6f;
+  --palette-nero-300: #595959;
+  --palette-nero-200: #323232;
+  --palette-nero-100: #191919;
+  --palette-koamaru-1000: #e3e3fa;
+  --palette-koamaru-900: #cacaf5;
+  --palette-koamaru-800: #9a9af0;
+  --palette-koamaru-700: #6767e8;
+  --palette-koamaru-600: #3535e1;
+  --palette-koamaru-500: #1d1dbf;
+  --palette-koamaru-400: #15158c;
+  --palette-koamaru-300: #111170;
+  --palette-koamaru-200: #0d0d54;
+  --palette-koamaru-100: #080838;
+  --palette-violet-1000: #efe3fa;
+  --palette-violet-900: #e0caf5;
+  --palette-violet-800: #c59af0;
+  --palette-violet-700: #a867e8;
+  --palette-violet-600: #8b35e1;
+  --palette-violet-500: #6e1dbf;
+  --palette-violet-400: #51158c;
+  --palette-violet-300: #411170;
+  --palette-violet-200: #310d54;
+  --palette-violet-100: #200838;
+  --palette-cinnabar-1000: #faebeb;
+  --palette-cinnabar-900: #fadcdc;
+  --palette-cinnabar-800: #f09a9a;
+  --palette-cinnabar-700: #e86868;
+  --palette-cinnabar-600: #de3535;
+  --palette-cinnabar-500: #bf1d1d;
+  --palette-cinnabar-400: #9f1818;
+  --palette-cinnabar-300: #7f1313;
+  --palette-cinnabar-200: #600f0f;
+  --palette-cinnabar-100: #400a0a;
+  --palette-eucalyptus-1000: #ebfaf1;
+  --palette-eucalyptus-900: #d7f5e4;
+  --palette-eucalyptus-800: #79e2a6;
+  --palette-eucalyptus-700: #36d379;
+  --palette-eucalyptus-600: #219653;
+  --palette-eucalyptus-500: #1c8147;
+  --palette-eucalyptus-400: #186b3b;
+  --palette-eucalyptus-300: #13562f;
+  --palette-eucalyptus-200: #0e4024;
+  --palette-eucalyptus-100: #092b18;
+  --palette-hacienda-1000: #faf5de;
+  --palette-hacienda-900: #f5ecc2;
+  --palette-hacienda-800: #ebd986;
+  --palette-hacienda-700: #e1c649;
+  --palette-hacienda-600: #c4a720;
+  --palette-hacienda-500: #877316;
+  --palette-hacienda-400: #716012;
+  --palette-hacienda-300: #5a4d0f;
+  --palette-hacienda-200: #443a0b;
+  --palette-hacienda-100: #2d2607;
+  --palette-koala-1000: #f7f6f4;
+  --palette-koala-900: #f2f0ed;
+  --palette-koala-800: #e3dfda;
+  --palette-koala-700: #cdc7c2;
+  --palette-koala-600: #b2aba5;
+  --palette-koala-500: #938c85;
+  --palette-koala-400: #726c66;
+  --palette-koala-300: #544e4a;
+  --palette-koala-200: #393533;
+  --palette-koala-100: #262321;
+  --palette-navy-1000: #e8effa;
+  --palette-navy-900: #d8e5f9;
+  --palette-navy-800: #bad1f5;
+  --palette-navy-700: #9abaef;
+  --palette-navy-600: #7ca1e6;
+  --palette-navy-500: #5f86d8;
+  --palette-navy-400: #476bc3;
+  --palette-navy-300: #324fa5;
+  --palette-navy-200: #20337d;
+  --palette-navy-100: #121c4e;
+  --palette-puprple-1000: #ece8f8;
+  --palette-puprple-900: #e3ddf4;
+  --palette-puprple-800: #d3c5ec;
+  --palette-puprple-700: #b9ace2;
+  --palette-puprple-600: #a494d6;
+  --palette-puprple-500: #8f7dc5;
+  --palette-puprple-400: #7967ae;
+  --palette-puprple-300: #5f4b92;
+  --palette-puprple-200: #413069;
+  --palette-puprple-100: #2a1d47;
+  --palette-red-1000: #fad9d9;
+  --palette-red-900: #f9c4c3;
+  --palette-red-800: #f79a96;
+  --palette-red-700: #f3776f;
+  --palette-red-600: #ec5b4e;
+  --palette-red-500: #de4635;
+  --palette-red-400: #c53422;
+  --palette-red-300: #9c2514;
+  --palette-red-200: #71190c;
+  --palette-red-100: #4e1007;
+  --palette-green-1000: #dbf7dc;
+  --palette-green-900: #c2f2c3;
+  --palette-green-800: #99e596;
+  --palette-green-700: #7cd273;
+  --palette-green-600: #65ba58;
+  --palette-green-500: #529c42;
+  --palette-green-400: #407b30;
+  --palette-green-300: #2f5b22;
+  --palette-green-200: #214017;
+  --palette-green-100: #162a0f;
+  --palette-amber-1000: #f8eed9;
+  --palette-amber-900: #f5e3c0;
+  --palette-amber-800: #efcc8d;
+  --palette-amber-700: #e6b25d;
+  --palette-amber-600: #db9431;
+  --palette-amber-500: #cc730d;
+  --palette-amber-400: #b65700;
+  --palette-amber-300: #983f00;
+  --palette-amber-200: #772900;
+  --palette-amber-100: #601b00;
+  --palette-isabelline-9: #1d1d1b;
+  --palette-isabelline-8: #393936;
+  --palette-isabelline-7: #565651;
+  --palette-isabelline-6: #73736c;
+  --palette-isabelline-5: #8f8f88;
+  --palette-isabelline-4: #aaaaa5;
+  --palette-isabelline-3: #c5c5c1;
+  --palette-isabelline-2: #e0e0de;
+  --palette-isabelline-1: #f0f0ef;
+  --palette-isabelline-0-5: #f7f7f6;
+  --palette-cobalt-8: #001842;
+  --palette-cobalt-7: #002563;
+  --palette-cobalt-6: #003184;
+  --palette-cobalt-5: #003da5;
+  --palette-cobalt-4: #0030ea;
+  --palette-cobalt-3: #307dff;
+  --palette-cobalt-2: #75a8ff;
+  --palette-cobalt-1: #bad4ff;
+  --palette-cobalt-0-5: #deeaff;
+  --palette-watermelon-0-5: #ffebf0;
+  --palette-watermelon-6: #f5003b;
+  --palette-sazerac-6: #d57900;
+  --palette-sinbad-7: #357980;
+  --white: #fff;
+  --black: #000;
+  --font-circular: 'Circular20', sans-serif;
+  --font-work-sans: 'Work Sans', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-gilroy: 'Gilroy', sans-serif;
+}
+
+.adp {
+  --nav-border-light-color: var(--palette-koala-500);
+  --nav-border-active-light-color: var(--palette-navy-500);
+  --nav-border-visited-light-color: var(--palette-koala-500);
+}
+
+.nayya {
+  --nav-border-light-color: var(--palette-isabelline-3);
+  --nav-border-active-light-color: var(--palette-cobalt-4);
+  --nav-border-visited-light-color: var(--palette-cobalt-6);
+}
