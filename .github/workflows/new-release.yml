@@ -15,7 +15,10 @@ jobs:
         uses: actions/checkout@main
       - name: Say description
         run: |
-          echo ${{ github.event.pull_request }}
+          echo ${{ github.event.pull_request.body }}
+      - name: Say title
+        run: |
+          echo ${{ github.event.pull_request.title }}
       - name: Set Version
         id: set-version
         run: echo "::set-output name=tag_version::$(sh ./.github/scripts/get-version.sh)"
