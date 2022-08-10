@@ -1,0 +1,19 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-release
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout Code
+      uses: actions/checkout@main
+    - name: Get Release Notes
+      env:
+        COMMIT_TEXT: "${{ github.event.head_commit.message }}"
+    - name: Echo release notes
+      run: echo $COMMIT_TEXT
+  
