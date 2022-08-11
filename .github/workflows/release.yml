@@ -1,22 +1,18 @@
-name: Release
+name: New Release
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types: [closed]
 
 jobs:
   create-release:
     name: Create Release
+    # this job will only run if the PR has been merged
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@main
-      - name: Get Release Notes
-        env:
-          COMMIT_TEXT: '${{ github.event.head_commit.message }}'
-        run: |
-          echo $COMMIT_TEXT
       - name: Set Version
         id: set-version
         run: echo "::set-output name=tag_version::$(sh ./.github/scripts/get-version.sh)"
@@ -29,9 +25,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v${{ steps.set-version.outputs.tag_version }}
-          release_name: Release v${{ steps.set-version.outputs.tag_version }}
+          release_name: ${{ github.event.pull_request.title }}
           body: |
             Release Changes:
-              ${{ github.event.head_commit.message }}
+              ${{ github.event.pull_request.body }}
           draft: false
           prerelease: false
